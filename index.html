@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Talentsdafrik | Consulting & Recrutement Afrique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1a1f2e;
+            --secondary: #d4af37;
+            --accent: #b8941f;
+            --text: #2c3e50;
+            --text-light: #64748b;
+            --bg-warm: #faf9f7;
+            --border: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* ===== SYSTÈME DE LANGUE ===== */
+        .fr, .en {
+            display: none !important;
+        }
+        
+        [data-lang="fr"] .fr {
+            display: block !important;
+        }
+        
+        [data-lang="fr"] span.fr,
+        [data-lang="fr"] a.fr,
+        [data-lang="fr"] button.fr,
+        [data-lang="fr"] div.fr,
+        [data-lang="fr"] p.fr,
+        [data-lang="fr"] h1.fr,
+        [data-lang="fr"] h2.fr,
+        [data-lang="fr"] h3.fr,
+        [data-lang="fr"] h4.fr,
+        [data-lang="fr"] label.fr,
+        [data-lang="fr"] strong.fr,
+        [data-lang="fr"] li.fr {
+            display: inline-block !important;
+        }
+        
+        [data-lang="fr"] div.fr,
+        [data-lang="fr"] p.fr,
+        [data-lang="fr"] h1.fr,
+        [data-lang="fr"] h2.fr,
+        [data-lang="fr"] h3.fr,
+        [data-lang="fr"] h4.fr,
+        [data-lang="fr"] li.fr {
+            display: block !important;
+        }
+
+        [data-lang="en"] .en {
+            display: block !important;
+        }
+        
+        [data-lang="en"] span.en,
+        [data-lang="en"] a.en,
+        [data-lang="en"] button.en,
+        [data-lang="en"] div.en,
+        [data-lang="en"] p.en,
+        [data-lang="en"] h1.en,
+        [data-lang="en"] h2.en,
+        [data-lang="en"] h3.en,
+        [data-lang="en"] h4.en,
+        [data-lang="en"] label.en,
+        [data-lang="en"] strong.en,
+        [data-lang="en"] li.en {
+            display: inline-block !important;
+        }
+        
+        [data-lang="en"] div.en,
+        [data-lang="en"] p.en,
+        [data-lang="en"] h1.en,
+        [data-lang="en"] h2.en,
+        [data-lang="en"] h3.en,
+        [data-lang="en"] h4.en,
+        [data-lang="en"] li.en {
+            display: block !important;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            border-bottom: 3px solid var(--secondary);
+            position: relative;
+            z-index: 1001;
+        }
+
+        .top-bar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.7);
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .lang-btn.active {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .top-contact {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .top-contact a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .top-contact a:hover {
+            color: var(--secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .social-icons a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ===== NAVBAR CORRIGÉE ===== */
+        .main-nav {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px; /* Augmenté de 1200px à 1400px */
+            margin: 0 auto;
+            padding: 0 3rem; /* Plus de padding horizontal */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px; /* Hauteur augmentée */
+            position: relative;
+        }
+
+        .logo-main {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            flex-shrink: 0; /* Empêche le logo de rétrécir */
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(212,175,55,0.4);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem; /* Légèrement réduit pour gagner de la place */
+            color: var(--primary);
+            letter-spacing: 1px;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.2rem;
+            white-space: nowrap;
+        }
+
+        /* BOUTON HAMBURGER - Mobile seulement */
+        .mobile-menu-btn {
+            display: none; /* Caché par défaut sur desktop */
+            width: 30px;
+            height: 24px;
+            position: relative;
+            cursor: pointer;
+            z-index: 1002;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+            left: 0;
+        }
+
+        .mobile-menu-btn span:nth-child(1) { top: 0; }
+        .mobile-menu-btn span:nth-child(2) { top: 11px; }
+        .mobile-menu-btn span:nth-child(3) { top: 22px; }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            top: 11px;
+            transform: rotate(45deg);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            top: 11px;
+            transform: rotate(-45deg);
+        }
+
+        /* MENU DESKTOP - CORRIGÉ */
+        .nav-menu {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 0.5rem; /* Espace entre les items */
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.85rem; /* Légèrement réduit pour éviter l'entassement */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.8rem 1.2rem; /* Padding horizontal augmenté */
+            display: block;
+            white-space: nowrap; /* Empêche le retour à la ligne */
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 80%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        /* Dropdown Desktop */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown > a::after {
+            content: '▼';
+            font-size: 0.6rem;
+            margin-left: 0.3rem;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            border-top: 3px solid var(--secondary);
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            padding: 0.9rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: none;
+            font-weight: 500;
+            display: block;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: var(--bg-warm);
+            padding-left: 1.8rem;
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
+        /* OVERLAY - Mobile seulement */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        /* ===== RESPONSIVE NAVBAR ===== */
+        @media (max-width: 1200px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+            
+            .nav-menu a {
+                padding: 0.8rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            /* Passage en mode mobile */
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-container {
+                height: 70px;
+                padding: 0 1.5rem;
+            }
+
+            .logo-text .brand {
+                font-size: 1.3rem;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 5rem 0 2rem;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+                overflow-y: auto;
+                z-index: 1000;
+                align-items: stretch;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                font-size: 1rem;
+                padding: 1.2rem 1.5rem;
+                border-bottom: 1px solid var(--border);
+                white-space: normal;
+            }
+
+            .nav-menu a::after {
+                display: none;
+            }
+
+            .nav-menu a:hover {
+                background: var(--bg-warm);
+                padding-left: 2rem;
+            }
+
+            .dropdown-content {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                border-top: none;
+                background: var(--bg-warm);
+                padding-left: 1rem;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .dropdown > a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .dropdown > a::after {
+                content: '▼';
+                font-size: 0.8rem;
+                transition: transform 0.3s;
+            }
+
+            .dropdown.active > a::after {
+                transform: rotate(180deg);
+            }
+
+            .menu-overlay {
+                display: block;
+            }
+
+            .menu-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        /* HERO SLIDER RESPONSIVE */
+        .hero-slider {
+            position: relative;
+            height: 70vh; /* Augmenté */
+            min-height: 500px;
+            max-height: 700px;
+            overflow: hidden;
+            background: var(--primary);
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            padding: 0 1.5rem;
+        }
+
+        .slide.active { opacity: 1; }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .slide-content h2 {
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .slide-content p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .slide-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .slide-nav:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        .slide-prev { left: 2rem; }
+        .slide-next { right: 2rem; }
+
+        @media (max-width: 768px) {
+            .slide-nav { 
+                width: 40px; 
+                height: 40px;
+                font-size: 1rem;
+            }
+            .slide-prev { left: 1rem; }
+            .slide-next { right: 1rem; }
+            .hero-slider { height: 60vh; min-height: 400px; }
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot.active { 
+            background: var(--secondary); 
+            transform: scale(1.2);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1400px; /* Uniformisé avec la navbar */
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        section { padding: 5rem 0; }
+
+        @media (max-width: 768px) { 
+            section { padding: 3rem 0; }
+            .container { padding: 0 1.5rem; }
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 1.5rem auto 0;
+        }
+
+        /* SERVICES RESPONSIVE */
+        .services-section { background: var(--bg-warm); }
+
+        .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+        }
+
+        .service-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-left-color: var(--secondary);
+        }
+
+        .service-icon-circle {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+        }
+
+        .service-item:nth-child(even) .service-icon-circle {
+            background: linear-gradient(135deg, var(--primary), #2c3e50);
+        }
+
+        .service-item h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .center-display {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            order: -1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .center-display::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .center-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--bg-warm);
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 5px solid var(--secondary);
+            color: var(--secondary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .database-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .database-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .db-feature {
+            background: var(--bg-warm);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.3fr 1fr;
+                gap: 3rem;
+                align-items: center;
+            }
+            .center-display { 
+                order: 0; 
+                padding: 4rem 3rem;
+            }
+            .center-icon { 
+                width: 140px; 
+                height: 140px; 
+                font-size: 4rem; 
+            }
+            .database-title { font-size: 1.8rem; }
+        }
+
+        /* NEWS RESPONSIVE */
+        .news-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .news-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .news-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .news-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .news-list-custom {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .news-item {
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            background: var(--bg-warm);
+            border-radius: 0 15px 15px 0;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .news-item:hover {
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateX(10px);
+        }
+
+        .news-item h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        .news-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .news-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+            }
+            .news-image img { height: 450px; }
+            .news-item h4 { font-size: 1.2rem; }
+        }
+
+        /* FEATURES DARK RESPONSIVE */
+        .features-dark {
+            background: linear-gradient(135deg, #1a1f2e 0%, #2c3e50 100%);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-dark::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
+            opacity: 0.5;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .features-content h2 {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .feature-line {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+        }
+
+        .feature-line:hover {
+            background: rgba(212,175,55,0.1);
+            transform: translateX(10px);
+        }
+
+        .feature-line i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            flex-shrink: 0;
+            margin-top: 0.3rem;
+        }
+
+        .feature-line h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .feature-line p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .features-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 3px solid rgba(212,175,55,0.3);
+        }
+
+        .features-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (min-width: 900px) {
+            .features-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+                align-items: center;
+            }
+        }
+
+        /* EVENT RESPONSIVE */
+        .event-section { background: var(--bg-warm); }
+
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-poster {
+            background: linear-gradient(135deg, var(--primary), #2c3e50);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .event-date-big {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-month {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .event-details {
+            padding: 3rem;
+        }
+
+        .event-label {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .event-title {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--primary);
+            margin-bottom: 2rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: var(--bg-warm);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 80px;
+            border: 2px solid var(--border);
+            flex: 1;
+            max-width: 100px;
+        }
+
+        .countdown-item .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .countdown-item .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        .event-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--primary);
+            border-color: var(--secondary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .event-card {
+                display: grid;
+                grid-template-columns: 280px 1fr;
+            }
+        }
+
+        /* CONTACT RESPONSIVE */
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .contact-info-box {
+            background: var(--primary);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--secondary);
+        }
+
+        .contact-info-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: start;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-detail i {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-top: 0.3rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-detail div {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: #25d366;
+            color: white;
+            padding: 1.2rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+        }
+
+        .contact-form {
+            background: var(--bg-warm);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+        }
+
+        @media (min-width: 900px) {
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                gap: 4rem;
+            }
+            .whatsapp-btn { width: auto; }
+        }
+
+        /* FOOTER RESPONSIVE */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 0 2rem;
+            border-top: 5px solid var(--secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 600px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-col h4 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .footer-col p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 997;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        .no-scroll { overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLang('fr')" data-lang-btn="fr">
+                    🇫🇷 FR
+                </button>
+                <button class="lang-btn" onclick="switchLang('en')" data-lang-btn="en">
+                    🇬🇧 EN
+                </button>
+            </div>
+            
+            <div class="top-contact">
+                <a href="tel:+16196906086">
+                    <i class="fas fa-phone"></i> +1 (619) 690-6086
+                </a>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo-main">
+                <div class="logo-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="brand">TALENTSDAFRIK</div>
+                    <span class="tagline fr">Consulting & Recrutement</span>
+                    <span class="tagline en">Consulting & Recruitment</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="dropdown">
+                    <a href="#about" onclick="handleLinkClick(event, this)">
+                        <span class="fr">QUI SOMMES-NOUS</span>
+                        <span class="en">WHO WE ARE</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#about" onclick="handleLinkClick(event, this)">
+                            <span class="fr">Notre Vision</span>
+                            <span class="en">Our Vision</span>
+                        </a>
+                        <a href="#team" onclick="handleLinkClick(event, this)">
+                            <span class="fr">Notre Équipe</span>
+                            <span class="en">Our Team</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#services" onclick="handleLinkClick(event, this)">
+                        <span class="fr">SERVICES</span>
+                        <span class="en">SERVICES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#debono" onclick="handleLinkClick(event, this)">
+                        <span class="fr">FORMATION</span>
+                        <span class="en">TRAINING</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#jobs" onclick="handleLinkClick(event, this)">
+                        <span class="fr">CARRIÈRES</span>
+                        <span class="en">CAREERS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="handleLinkClick(event, this)">
+                        <span class="fr">CONTACT</span>
+                        <span class="en">CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Hero Slider -->
+    <div class="hero-slider" id="home">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200');">
+            <div class="slide-content">
+                <h2>
+                    <span class="fr">L'information sur l'emploi devient accessible</span>
+                    <span class="en">Employment information becomes accessible</span>
+                </h2>
+                <p>
+                    <span class="fr">Cabinet international de consultants chevronnés en Afrique et Amérique du Nord</span>
+                    <span class="en">International firm of seasoned consultants in Africa and North America</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200');">
+            <div class="slide-content">
+                <h2>
+                    <span class="fr">Recrutement Exécutif</span>
+                    <span class="en">Executive Recruitment</span>
+                </h2>
+                <p>
+                    <span class="fr">Identification de pépites d'or et de diamant pour votre entreprise</span>
+                    <span class="en">Identifying gold nuggets and diamonds for your company</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200');">
+            <div class="slide-content">
+                <h2>
+                    <span class="fr">Formation De Bono</span>
+                    <span class="en">De Bono Training</span>
+                </h2>
+                <p>
+                    <span class="fr">Pensée latérale, créativité et innovation pour vos équipes</span>
+                    <span class="en">Lateral thinking, creativity and innovation for your teams</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-nav slide-prev" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="slide-nav slide-next" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="slider-dots">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot" onclick="goToSlide(1)"></div>
+            <div class="dot" onclick="goToSlide(2)"></div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="fr">NOS SERVICES</span>
+                    <span class="en">OUR SERVICES</span>
+                </h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Left -->
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-icon-circle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="fr">Recrutement Exécutif</span>
+                                <span class="en">Executive Recruitment</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Chasse de têtes et talents rares</span>
+                                <span class="en">Headhunting and rare talents</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon-circle">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="fr">Formation De Bono</span>
+                                <span class="en">De Bono Training</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Pensée latérale certifiée</span>
+                                <span class="en">Certified lateral thinking</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon-circle">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="fr">Conseil Stratégique</span>
+                                <span class="en">Strategic Consulting</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Transformation et coaching</span>
+                                <span class="en">Transformation and coaching</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center -->
+                <div class="center-display">
+                    <div class="center-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <div class="database-title">TALENTSDAFRIK</div>
+                    <p>
+                        <span class="fr">Réseau actif de consultants disponibles 24/7</span>
+                        <span class="en">Active network of consultants available 24/7</span>
+                    </p>
+                    
+                    <div class="database-features">
+                        <span class="db-feature">
+                            <i class="fas fa-check"></i> Afrique
+                        </span>
+                        <span class="db-feature">
+                            <i class="fas fa-check"></i> USA
+                        </span>
+                        <span class="db-feature">
+                            <i class="fas fa-check"></i> 24/7
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right -->
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-icon-circle">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="fr">Études de Marché</span>
+                                <span class="en">Market Research</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Intelligence économique</span>
+                                <span class="en">Economic intelligence</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon-circle">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="fr">Business Plans</span>
+                                <span class="en">Business Plans</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Montage et financement</span>
+                                <span class="en">Fundraising proposals</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon-circle">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="fr">Restructuring</span>
+                                <span class="en">Restructuring</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Optimisation RH</span>
+                                <span class="en">HR optimization</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="fr">ACTUALITÉS</span>
+                    <span class="en">NEWS</span>
+                </h2>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1573164574472-797cdf4a583a?w=800" alt="News">
+                    <div class="news-badge">
+                        <span class="fr">RECRUTEMENT</span>
+                        <span class="en">RECRUITMENT</span>
+                    </div>
+                </div>
+
+                <div class="news-list-custom">
+                    <div class="news-item">
+                        <h4>
+                            <span class="fr">VP Finance : Candidatures ouvertes pour poste stratégique en Côte d'Ivoire</span>
+                            <span class="en">VP Finance: Applications open for strategic position in Ivory Coast</span>
+                        </h4>
+                        <span class="news-date">15 Jan 2023</span>
+                    </div>
+
+                    <div class="news-item">
+                        <h4>
+                            <span class="fr">Formation De Bono : Prochaine session le 29 mars à Abidjan et Washington DC</span>
+                            <span class="en">De Bono Training: Next session March 29 in Abidjan and Washington DC</span>
+                        </h4>
+                        <span class="news-date">10 Jan 2023</span>
+                    </div>
+
+                    <div class="news-item">
+                        <h4>
+                            <span class="fr">Talentsdafrik partenaire officiel du sommet des CEOs africains 2023</span>
+                            <span class="en">Talentsdafrik official partner of African CEOs Summit 2023</span>
+                        </h4>
+                        <span class="news-date">05 Jan 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Dark -->
+    <section class="features-dark" id="about">
+        <div class="container">
+            <div class="features-grid">
+                <div class="features-content">
+                    <h2>
+                        <span class="fr">VOTRE PARTENAIRE DÉVELOPPEMENT EN AFRIQUE</span>
+                        <span class="en">YOUR DEVELOPMENT PARTNER IN AFRICA</span>
+                    </h2>
+
+                    <div class="feature-line">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h3>
+                                <span class="fr">Représentation Commerciale</span>
+                                <span class="en">Commercial Representation</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Identification de clients potentiels et négociation de contrats.</span>
+                                <span class="en">Identifying potential clients and contract negotiation.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-line">
+                        <i class="fas fa-chart-pie"></i>
+                        <div>
+                            <h3>Business Development</h3>
+                            <p>
+                                <span class="fr">Études de marché et stratégies commerciales adaptées.</span>
+                                <span class="en">Market research and adapted commercial strategies.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-line">
+                        <i class="fas fa-cogs"></i>
+                        <div>
+                            <h3>
+                                <span class="fr">Support Opérationnel</span>
+                                <span class="en">Operational Support</span>
+                            </h3>
+                            <p>
+                                <span class="fr">Recrutement et gestion des autorités locales.</span>
+                                <span class="en">Recruitment and local authorities management.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800" alt="Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section class="event-section" id="debono">
+        <div class="container">
+            <div class="event-card">
+                <div class="event-poster">
+                    <div class="event-date-big">29</div>
+                    <div class="event-month">MARCH</div>
+                    <div style="margin-top: 1rem;">
+                        <i class="fas fa-map-marker-alt"></i> Abidjan & DC
+                    </div>
+                </div>
+
+                <div class="event-details">
+                    <div class="event-label">
+                        <span class="fr">ÉVÉNEMENT À VENIR</span>
+                        <span class="en">UPCOMING EVENT</span>
+                    </div>
+                    
+                    <h3 class="event-title">
+                        <span class="fr">SESSION CERTIFIÉE : PENSÉE LATÉRALE DE BONO</span>
+                        <span class="en">CERTIFIED SESSION: DE BONO LATERAL THINKING</span>
+                    </h3>
+
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="number" id="days">00</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="hours">00</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="minutes">00</span>
+                            <span class="label">Min</span>
+                        </div>
+                    </div>
+
+                    <div class="event-buttons">
+                        <a href="#" class="btn-primary">
+                            <span class="fr">Plus d'informations</span>
+                            <span class="en">More Information</span>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <span class="fr">S'inscrire maintenant</span>
+                            <span class="en">Register Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="fr">CONTACTEZ-NOUS</span>
+                    <span class="en">CONTACT US</span>
+                </h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>
+                        <span class="fr">Contact Direct</span>
+                        <span class="en">Direct Contact</span>
+                    </h3>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong style="color: var(--secondary);">Mme DJEDEJES</strong>
+                            <div style="opacity: 0.8; font-size: 0.95rem;">
+                                <span class="fr">Directrice Associée</span>
+                                <span class="en">Associate Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span class="fr">Abidjan, Côte d'Ivoire</span>
+                            <span class="en">Abidjan, Ivory Coast</span>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">Washington DC, USA</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            +1 (619) 690-6086<br>
+                            +225 08 560 133
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>welcome@talentsdafrik.com</div>
+                    </div>
+
+                    <a href="https://wa.me/16196906086" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> 
+                        <span class="fr">Discuter sur WhatsApp</span>
+                        <span class="en">Chat on WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label class="fr">Nom</label>
+                                <label class="en">Last Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="fr">Prénom</label>
+                                <label class="en">First Name</label>
+                                <input type="text" required>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="fr">Téléphone</label>
+                                <label class="en">Phone</label>
+                                <input type="tel" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fr">Sujet</label>
+                            <label class="en">Subject</label>
+                            <select required>
+                                <option value="">
+                                    <span class="fr">-- Sélectionner --</span>
+                                    <span class="en">-- Select --</span>
+                                </option>
+                                <option value="recrutement">
+                                    <span class="fr">Recrutement</span>
+                                    <span class="en">Recruitment</span>
+                                </option>
+                                <option value="formation">
+                                    <span class="fr">Formation</span>
+                                    <span class="en">Training</span>
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fr">Message</label>
+                            <label class="en">Message</label>
+                            <textarea rows="4" required></textarea>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem;">
+                            <button type="button" class="btn-secondary" onclick="resetForm()" style="flex: 1;">
+                                <span class="fr">Annuler</span>
+                                <span class="en">Cancel</span>
+                            </button>
+                            <button type="submit" class="btn-primary" style="flex: 2; border: none;">
+                                <span class="fr">Envoyer</span>
+                                <span class="en">Send</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TALENTSDAFRIK</h4>
+                    <p>
+                        <span class="fr">Cabinet international de consultants, formateurs et recruteurs chevronnés, offrant des prestations d'excellence en Afrique et en Amérique du Nord.</span>
+                        <span class="en">International firm of seasoned consultants, trainers and recruiters, offering excellence services in Africa and North America.</span>
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>
+                        <span class="fr">LIENS RAPIDES</span>
+                        <span class="en">QUICK LINKS</span>
+                    </h4>
+                    <a href="#services">Services</a>
+                    <a href="#jobs">
+                        <span class="fr">Carrières</span>
+                        <span class="en">Careers</span>
+                    </a>
+                    <a href="#debono">De Bono</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>CONTACT</h4>
+                    <p>
+                        Mme DJEDEJES<br>
+                        +1 (619) 690-6086<br>
+                        +225 08 560 133<br>
+                        welcome@talentsdafrik.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2023 Talentsdafrik. 
+                    <span class="fr">Tous droits réservés.</span>
+                    <span class="en">All rights reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/16196906086" class="whatsapp-float" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // MENU MOBILE
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            const overlay = document.getElementById('overlay');
+            const btn = document.querySelector('.mobile-menu-btn');
+            
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            btn.classList.toggle('active');
+            
+            if (menu.classList.contains('active')) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+        }
+
+        function handleLinkClick(e, element) {
+            if (window.innerWidth < 1024 && element.parentElement.classList.contains('dropdown')) {
+                const parent = element.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+                
+                if (!isActive) {
+                    parent.classList.add('active');
+                    e.preventDefault();
+                    return;
+                }
+            }
+            
+            if (window.innerWidth < 1024) {
+                toggleMenu();
+            }
+        }
+
+        // LANGUE
+        function switchLang(lang) {
+            document.documentElement.setAttribute('data-lang', lang);
+            localStorage.setItem('lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('lang') || 'fr';
+        switchLang(savedLang);
+
+        // SLIDER
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(n) { showSlide(currentSlide + n); }
+        function goToSlide(n) { showSlide(n); }
+        setInterval(() => changeSlide(1), 6000);
+
+        // COMPTE À REBOURS
+        const targetDate = new Date('March 29, 2025 09:00:00').getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // FORMULAIRE
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert(savedLang === 'fr' ? 'Message envoyé avec succès !' : 'Message sent successfully!');
+            e.target.reset();
+        }
+
+        function resetForm() {
+            document.getElementById('contactForm').reset();
+        }
+
+        // Fermer menu au resize vers desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                const menu = document.getElementById('navMenu');
+                const overlay = document.getElementById('overlay');
+                const btn = document.querySelector('.mobile-menu-btn');
+                
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    btn.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
